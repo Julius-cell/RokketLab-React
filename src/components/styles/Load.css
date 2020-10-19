@@ -5,7 +5,7 @@
 }
 
 body {
-	background-image: linear-gradient(135deg, #f5f7fa 0%, #c3cfe2 100%);
+	/* background-image: linear-gradient(135deg, #f5f7fa 0%, #c3cfe2 100%); */
 	
 	display: flex;
 	align-items: center;
@@ -37,7 +37,7 @@ h2 {
 
 .circle {
 	animation: grow 1.5s linear infinite;
-	background-color: purple;
+	background-color: #400000;
 	border-radius: 50%;
 	display: inline-block;
 	margin: -10px;
@@ -48,7 +48,7 @@ h2 {
 
 .circle:nth-of-type(2) {
 	animation-delay: .75s;
-	background-color: palevioletred;
+	background-color: #35364e;
 }
 
 @keyframes grow {

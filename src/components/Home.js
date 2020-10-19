@@ -13,7 +13,7 @@ const Home = () => {
     setLoading(true);
     setTag(tag);
     setLoading(false);
-  }
+  };
 
   return (
     <div className="App">
@@ -37,8 +37,6 @@ const Home = () => {
         )}
     </div>
   )
-}
-
-
+};
 
 export default Home;

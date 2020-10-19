@@ -1,6 +1,7 @@
 import React, { useEffect, useState } from 'react';
 import axios from 'axios';
 import Load from './Load';
+import './styles/Post.css';
 
 const BASE_URL = 'https:///dummyapi.io/data/api';
 const APP_ID = '5f89ad874b170676253c0837';
@@ -28,16 +29,69 @@ const Posts = ({ match }) => {
     <div className="App">
       {loading ? (
         <div>
-          <Load/>
+          <Load />
         </div>
       ) :
         (
-          <div>
+          <div className="posts">
             {posts.map(post => {
               return (
-                <div key={post.id}>
-                  <h1>{post.owner.firstName} {post.owner.lastName}</h1>
-                  <img src={post.owner.picture} alt=''/>
+                <div key={post.id} className="card">
+
+
+
+                  <div className="card-image">                  
+                      <img src={post.image} alt="" />
+                  </div>
+
+
+
+                  <div className="card-text">
+
+                    <span className="date">
+                      {post.tags.map(tag => {
+                        return (<p>{tag}</p>)
+                      })}
+                    </span>
+
+
+
+                    <div className="user">
+                      <div className="banner_holder">
+                        <img id="user_image" src={post.owner.picture} alt="" />
+                      </div>
+                      <div className="info_holder">
+                        <p>{post.owner.firstName} {post.owner.lastName}</p>
+                        <p>{post.owner.email}</p>
+                      </div>
+                    </div>
+
+
+                      <div>
+                        <p>{post.text}</p>
+                      </div>
+
+
+                  </div>
+
+
+
+
+
+                  <div className="card-stats">
+                    <div className="stat">
+                      <div className="value">
+                        <ion-icon name="heart"></ion-icon>
+                      </div>
+                      <div className="type">{post.likes}</div>
+                    </div>
+
+                    <div className="stat border">
+                      <div className="value">10-10-2020</div>
+                      <div className="type">Date</div>
+                    </div>
+                  </div>
+
                 </div>
               )
             })}
@@ -45,6 +99,6 @@ const Posts = ({ match }) => {
         )}
     </div>
   )
-}
+};
 
 export default Posts;

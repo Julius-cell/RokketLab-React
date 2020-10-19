@@ -1,15 +1,16 @@
 import React from 'react';
 import { Link } from 'react-router-dom';
+import Halloween from '../halloween-witch-hat.png'
 
 // Me lleva de vuelta al home (barra de busqueda || Tag Selection)
 const NavBar = () => {
 	return (
-		<nav>
+		<div className="logo animate__animated animate__bounceInDown">
 			<Link to='/'>
-				<h3>Logo</h3>
+				<img src={Halloween} alt="halloween-hat"/>
 			</Link>
-		</nav>
+		</div>
 	)
-}
+};
 
 export default NavBar;

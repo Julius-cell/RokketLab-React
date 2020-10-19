@@ -5,6 +5,9 @@ body {
     sans-serif;
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
+
+  background: rgb(255,153,0);
+  background: radial-gradient(circle, rgba(255,153,0,1) 0%, rgba(210,101,2,1) 35%, rgba(73,37,143,1) 100%);
 }
 
 code {
@@ -13,5 +16,24 @@ code {
 }
 
 .App {
-  margin-bottom: 100px;
+  margin-bottom: 250px !important;
+}
+
+.logo {
+  display: grid;
+  text-align: center;
+  padding-bottom: 50px;
+}
+
+.logo img{
+  width: 175px;
+  transition: .5s;
+}
+
+.logo img:hover{
+  transform: scale(1.2);
+}
+
+a {
+  height: 150px;
 }

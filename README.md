@@ -1,4 +1,4 @@
-#Readme 
+# Readme 
 
 **Version 1.0.0**
 
@@ -7,15 +7,18 @@ del 'tag' que se ingrese a la busqueda.
 
 En esta aplicación se hacen llamadas a la API de <https://dummyapi.io/>
 
+Search Input from [Codepen](https://codepen.io/MilanMilosev/pen/JdgRpB/) 
+
 ---
 
 ## Tecnologies & Libraries:
 
-react
-hooks ( useEffect & useState )
-react-router-dom
-axios
-animate.css
+- react
+- hooks ( useEffect & useState )
+- react-router-dom
+- axios
+- animate.css
+- ionic
 
 ---
 
@@ -32,24 +35,13 @@ The page will reload if you make edits.<br />
 You will also see any lint errors in the console.
 
 
-### `npm run build`
-
-Builds the app for production to the `build` folder.<br />
-It correctly bundles React in production mode and optimizes the build for the best performance.
-
-The build is minified and the filenames include the hashes.<br />
-Your app is ready to be deployed!
-
-See the section about [deployment](https://facebook.github.io/create-react-app/docs/deployment) for more information.
-
 ## Learn More
 
 To learn React, check out the [React documentation](https://reactjs.org/).
-
-
-### Deployment
-
-This section has moved here: https://facebook.github.io/create-react-app/docs/deployment
+To learn React-router, check out the [React-router documentation](https://reactrouter.com/web/guides/quick-start).
+To learn Axios, check out the [Axios documentation](https://github.com/axios/axios).
+To learn Ionic, check out the [Ionic documentation](https://ionicons.com/).
+To learn Materialize, check out the [Materialize documentation](https://materializecss.com/).
 
 ---
 
