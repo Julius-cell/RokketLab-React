@@ -1,10 +1,6 @@
 .posts {	
-  /* width: 98vw;
-  display: flex;
-  align-items: center;
-  justify-content: center; */
   display: grid;
-  grid-template-columns: 1fr 1fr 1fr;
+  /* grid-template-columns: repeat(3, 1fr); */
 }
 
 
@@ -15,7 +11,7 @@
 
   grid-template-areas: "image" "text" "stats";
 
-  border-radius: 18px;
+  border-radius: 1.1em;
   background: white;
   box-shadow: 5px 5px 15px rgba(0,0,0,0.9);
   font-family: 'Lora', serif;
@@ -23,7 +19,7 @@
   
   transition: 0.5s ease;
   cursor: pointer;
-  margin:30px;
+  margin: 1.3em;
 }
 img {
 	width: 20em;
@@ -32,8 +28,8 @@ img {
 .card-image {
 	width: 20em;
   grid-area: "image";
-  border-top-left-radius: 15px;
-  border-top-right-radius: 15px;
+  border-top-left-radius: 1em;
+  border-top-right-radius: 1em;
   background-size: cover;
 }
 
@@ -44,13 +40,13 @@ img {
 .card-text .tag {
   display: flex;
   color: rgb(255, 7, 110);
-  font-size:13px;
+  font-size: 0.8em;
 }
 .card-text .tag p {
   padding: 0 5px;
-	border-radius: 15px;
+	border-radius: 1em;
   background-color: #f0ab21;
-  font-size: 15px;
+  font-size: 1em;
   text-transform: capitalize;
   color: white;
   margin: 0 2px;
@@ -76,18 +72,14 @@ img {
   align-items: center;
 }
 #user_image {
-  border-radius: 50px;
+  border-radius: 3em;
   width: 2.7em;
 }
 
 .card-text .user_text p {
   color: black;
-  font-size: 18px;
-  margin: 10px 5px;
-}
-.card-text h2 {
-  margin-top:0px;
-  font-size:28px;
+  font-size: 1.1em;
+  margin: 0.8em 0.5em;
 }
 
 .card-stats {
@@ -96,8 +88,8 @@ img {
   display: grid;
   grid-template-columns: 1fr 1fr;
   grid-template-rows: 1fr;
-  border-bottom-left-radius: 15px;
-  border-bottom-right-radius: 15px;
+  border-bottom-left-radius: 1em;
+  border-bottom-right-radius: 1em;
   background: #f0ab21;
 }
 .card-stats .stat {
@@ -118,7 +110,7 @@ img {
 
 .card-stats .type{
   font-size: 1em;
-  font-weight: 300;
+  font-weight: 400;
   text-transform: uppercase;
 }
 /* icon- heart */
@@ -129,4 +121,20 @@ ion-icon {
 .card:hover {
   transform: scale(1.1);
   box-shadow: 5px 5px 15px rgba(0,0,0,0.6);
+}
+
+@media (min-width: 550px) {
+  .posts {
+    grid-template-columns: repeat(1, 1fr);
+  }
+}
+@media (min-width: 750px) {
+  .posts {
+    grid-template-columns: repeat(2, 1fr);
+  }
+}
+@media (min-width: 950px) {
+  .posts {
+    grid-template-columns: repeat(3, 1fr);
+  }
 }
