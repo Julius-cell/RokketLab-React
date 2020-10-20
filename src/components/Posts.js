@@ -40,22 +40,19 @@ const Posts = ({ match }) => {
 
 
 
-                  <div className="card-image">                  
-                      <img src={post.image} alt="" />
+                  <div className="card-image">
+                    <img src={post.image} alt="" />
                   </div>
 
 
 
                   <div className="card-text">
 
-                    <span className="date">
+                    <span className="tag">
                       {post.tags.map(tag => {
                         return (<p>{tag}</p>)
                       })}
                     </span>
-
-
-
                     <div className="user">
                       <div className="banner_holder">
                         <img id="user_image" src={post.owner.picture} alt="" />
@@ -65,11 +62,9 @@ const Posts = ({ match }) => {
                         <p>{post.owner.email}</p>
                       </div>
                     </div>
-
-
-                      <div>
-                        <p>{post.text}</p>
-                      </div>
+                    <div className="user_text">
+                      <p>{post.text}</p>
+                    </div>
 
 
                   </div>

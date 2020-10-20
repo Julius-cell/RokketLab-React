@@ -1,14 +1,15 @@
-body {
-	
-  width: 100vw;
+.posts {	
+  /* width: 98vw;
   display: flex;
   align-items: center;
-  justify-content: center;
+  justify-content: center; */
+  display: grid;
+  grid-template-columns: 1fr 1fr 1fr;
 }
 
 
 .card {
-	width: 30em;
+	width: 20em;
 	display: grid;
 	grid-template-columns: 1fr;
 
@@ -17,68 +18,80 @@ body {
   border-radius: 18px;
   background: white;
   box-shadow: 5px 5px 15px rgba(0,0,0,0.9);
-  font-family: roboto;
+  font-family: 'Lora', serif;
   text-align: center;
   
-
   transition: 0.5s ease;
   cursor: pointer;
   margin:30px;
 }
 img {
-	width: 30em;
+	width: 20em;
 }
 
 .card-image {
-	width: 30em;
+	width: 20em;
   grid-area: "image";
   border-top-left-radius: 15px;
   border-top-right-radius: 15px;
   background-size: cover;
 }
 
-#user_image {
-	border-radius: 50px;
-	width: 60px;
-}
-
 .card-text {
   grid-area: text;
-  margin: 25px;
+  margin: 5px 10px;
 }
-.card-text .date {
+.card-text .tag {
   display: flex;
   color: rgb(255, 7, 110);
   font-size:13px;
 }
-
-.card-text .date p {
-	padding: 0 10px;
+.card-text .tag p {
+  padding: 0 5px;
 	border-radius: 15px;
-	background-color: #f0ab21;
+  background-color: #f0ab21;
+  font-size: 15px;
+  text-transform: capitalize;
+  color: white;
+  margin: 0 2px;
+}
+.card-text .user {
+  margin-top: 10px;
+  display: grid;
+	grid-template-columns: 1fr 2fr;
+	padding-top: 5px;
+}
+.user .info_holder {
+  display: grid;
+  align-items: center;
+}
+.user .info_holder p {
+  color: black;
+  text-align: left;
+  font-size: 1em;
+  margin: 0 5px;
+}
+.card-text .user .banner_holder {
+  display: grid!;
+  align-items: center;
+}
+#user_image {
+  border-radius: 50px;
+  width: 2.7em;
 }
 
-.card-text p {
-  color: grey;
-  font-size:15px;
-  font-weight: 300;
-	margin: 0 5px;
+.card-text .user_text p {
+  color: black;
+  font-size: 18px;
+  margin: 10px 5px;
 }
 .card-text h2 {
   margin-top:0px;
   font-size:28px;
 }
-.card-text .user {
-  display: grid;
-	grid-template-columns: 1fr 2fr;
-	padding-top: 15px;
-}
-
-.info_holder {
-	left: 0;
-}
 
 .card-stats {
+  width: 20em;
   grid-area: stats; 
   display: grid;
   grid-template-columns: 1fr 1fr;
@@ -88,7 +101,7 @@ img {
   background: #f0ab21;
 }
 .card-stats .stat {
-  padding:10px;
+  padding: 10px;
   display: flex;
   align-items: center;
   justify-content: center;
@@ -99,7 +112,7 @@ img {
   border-left: 1px solid rgb(172, 26, 87);
 }
 .card-stats .value{
-  font-size: 1.5em;
+  font-size: 1.1em;
   font-weight: 500;
 }
 
@@ -111,17 +124,6 @@ img {
 /* icon- heart */
 ion-icon {
   color: red;
-}
-
-.card-text p {
-  color: grey;
-  font-size:20px;
-  font-weight: 300;
-  margin: 0 5px;
-}
-.card-text h2 {
-  margin-top:0px;
-  font-size:28px;
 }
 
 .card:hover {
