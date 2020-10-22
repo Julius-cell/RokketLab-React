@@ -32,8 +32,8 @@ const SearchTag = ({ addTag }) => {
 
   return (
     <div>
-      <form id="content" className="animate__animated animate__bounceInDown" onSubmit={handleSubmit}>
-        <input type="text" id="search-input" onChange={handleChange} value={tag} />
+      <form data-netlify="true" id="content" className="animate__animated animate__bounceInDown" onSubmit={handleSubmit}>
+        <input type="text" name="search-input" id="search-input" onChange={handleChange} value={tag} />
         <button type="reset" className="search" id="search-btn"></button>
       </form>
     </div>
