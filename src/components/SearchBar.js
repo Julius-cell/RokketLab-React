@@ -34,7 +34,7 @@ const SearchTag = ({ addTag }) => {
     <div>
       <form id="content" className="animate__animated animate__bounceInDown" onSubmit={handleSubmit}>
         <input type="text" id="search-input" onChange={handleChange} value={tag} />
-        <button type="reset" class="search" id="search-btn"></button>
+        <button type="reset" className="search" id="search-btn"></button>
       </form>
     </div>
   )
