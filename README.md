@@ -5,9 +5,9 @@
 Aplicación que permito obtener diferentes posts dependiendo
 del 'tag' que se ingrese a la busqueda.
 
-En esta aplicación se hacen llamadas a la API de <https://dummyapi.io/>
+En esta aplicación se hacen llamadas a la API de <https://dummyapi.io/>.
 
-Search Input from [Codepen](https://codepen.io/MilanMilosev/pen/JdgRpB/) 
+Search Input from [Codepen](https://codepen.io/MilanMilosev/pen/JdgRpB/).
 
 ---
 
@@ -47,20 +47,19 @@ See the section about [deployment](https://facebook.github.io/create-react-app/d
 
 ## Learn More
 
-To learn React, check out the [React documentation](https://reactjs.org/).
-To learn React-router, check out the [React-router documentation](https://reactrouter.com/web/guides/quick-start).
-To learn Axios, check out the [Axios documentation](https://github.com/axios/axios).
-To learn Ionic, check out the [Ionic documentation](https://ionicons.com/).
-To learn Materialize, check out the [Materialize documentation](https://materializecss.com/).
+-To learn React, check out the [React documentation](https://reactjs.org/).
+-To learn React-router, check out the [React-router documentation](https://reactrouter.com/web/guides/quick-start).
+-To learn Axios, check out the [Axios documentation](https://github.com/axios/axios).
+-To learn Ionic, check out the [Ionic documentation](https://ionicons.com/).
 
 ---
 
 ## Contributors
 
-- Julio Cid <julio.cid.b@gmail.com>
+- Julio Cid <julio.cid.b@gmail.com>.
 
 ---
 
 ## License & copyright
 
-Julio Cid, Frontend Developer
+Julio Cid, Frontend Developer.

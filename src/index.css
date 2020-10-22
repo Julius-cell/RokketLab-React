@@ -16,13 +16,13 @@ code {
 }
 
 .App {
-  margin-bottom: 250px !important;
+  margin-bottom: 300px;
 }
 
 .logo {
   display: grid;
   text-align: center;
-  padding-bottom: 50px;
+  /* padding-bottom: ; */
 }
 
 .logo img{
@@ -35,5 +35,5 @@ code {
 }
 
 a {
-  height: 150px;
+  height: 250px;
 }

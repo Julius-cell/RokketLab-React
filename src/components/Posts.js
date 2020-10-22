@@ -21,6 +21,7 @@ const Posts = ({ match }) => {
       .then(data => setPosts(data.data.data))
       .catch(console.error)
       .finally(() => setLoading(false));
+      // eslint-disable-next-line react-hooks/exhaustive-deps
   }, []);
 
   console.log(posts);
@@ -49,8 +50,9 @@ const Posts = ({ match }) => {
                   <div className="card-text">
 
                     <span className="tag">
-                      {post.tags.map(tag => {
-                        return (<p>{tag}</p>)
+                      {post.tags.map((tag, i = 0) => {
+                        i++;
+                        return (<p key={i}>{tag}</p>)
                       })}
                     </span>
                     <div className="user">
