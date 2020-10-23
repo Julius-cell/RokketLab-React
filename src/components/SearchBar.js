@@ -6,7 +6,8 @@ const SearchTag = ({ addTag }) => {
   const [tag, setTag] = useState('');
 
   const handleChange = (e) => {
-    setTag(e.target.value)
+    const inLowerCase = e.target.value.toLowerCase();
+    setTag(inLowerCase);
   };
 
   useEffect(() => {
@@ -25,7 +26,7 @@ const SearchTag = ({ addTag }) => {
   const handleSubmit = (e) => {
     e.preventDefault();
     if (!tag) return;
-    console.log(tag);
+    console.log(tag);   // Show the word entered
     addTag(tag);
     setTag('');
   };

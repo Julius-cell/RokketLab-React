@@ -21,10 +21,12 @@ const Posts = ({ match }) => {
       .then(data => setPosts(data.data.data))
       .catch(console.error)
       .finally(() => setLoading(false));
-      // eslint-disable-next-line react-hooks/exhaustive-deps
+    // eslint-disable-next-line react-hooks/exhaustive-deps
   }, []);
 
   console.log(posts);
+
+  const len = posts.length;
 
   return (
     <div className="App">
@@ -34,66 +36,66 @@ const Posts = ({ match }) => {
         </div>
       ) :
         (
-          <div className="posts">
-            {posts.map(post => {
-              return (
-                <div key={post.id} className="card">
+          <div>
+            {len ? (
 
+              <div className="posts">
+                {posts.map(post => {
+                  return (
+                    <div key={post.id} className="card">
 
-
-                  <div className="card-image">
-                    <img src={post.image} alt="" />
-                  </div>
-
-
-
-                  <div className="card-text">
-
-                    <span className="tag">
-                      {post.tags.map((tag, i = 0) => {
-                        i++;
-                        return (<p key={i}>{tag}</p>)
-                      })}
-                    </span>
-                    <div className="user">
-                      <div className="banner_holder">
-                        <img id="user_image" src={post.owner.picture} alt="" />
+                      <div className="card-image">
+                        <img src={post.image} alt="" />
                       </div>
-                      <div className="info_holder">
-                        <p>{post.owner.firstName} {post.owner.lastName}</p>
-                        <p>{post.owner.email}</p>
+
+                      <div className="card-text">
+                        <span className="tag">
+                          {post.tags.map((tag, i = 0) => {
+                            i++;
+                            return (<p key={i}>{tag}</p>)
+                          })}
+                        </span>
+                        <div className="user">
+                          <div className="banner_holder">
+                            <img id="user_image" src={post.owner.picture} alt="" />
+                          </div>
+                          <div className="info_holder">
+                            <p>{post.owner.firstName} {post.owner.lastName}</p>
+                            <p>{post.owner.email}</p>
+                          </div>
+                        </div>
+                        <div className="user_text">
+                          <p>{post.text}</p>
+                        </div>
                       </div>
-                    </div>
-                    <div className="user_text">
-                      <p>{post.text}</p>
-                    </div>
 
+                      <div className="card-stats">
+                        <div className="stat">
+                          <div className="value">
+                            <ion-icon name="heart"></ion-icon>
+                          </div>
+                          <div className="type">{post.likes}</div>
+                        </div>
 
-                  </div>
-
-
-
-
-
-                  <div className="card-stats">
-                    <div className="stat">
-                      <div className="value">
-                        <ion-icon name="heart"></ion-icon>
+                        <div className="stat border">
+                          <div className="value">10-10-2020</div>
+                          <div className="type">Date</div>
+                        </div>
                       </div>
-                      <div className="type">{post.likes}</div>
-                    </div>
 
-                    <div className="stat border">
-                      <div className="value">10-10-2020</div>
-                      <div className="type">Date</div>
                     </div>
-                  </div>
-
+                  )
+                })}
+              </div>
+            ) : (
+                <div className="container">
+                  <p>No hay posts relacionados a esta palabra.</p>
+                  <p>Lo sentimos, intente otra vez.</p>
                 </div>
-              )
-            })}
+              )}
           </div>
-        )}
+        )
+      }
     </div>
   )
 };
